@@ -28,6 +28,9 @@
 // const menuToggle = document.getElementById('menu-toggle');
 // const navMenu = document.getElementById('nav-menu');
 // const contactForm = document.getElementById('contact-form');
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+const contactForm = document.getElementById('contact-form');
 
 
 // ==========================================================
@@ -38,6 +41,27 @@
 // - Toggle a class (e.g., 'active') on the nav menu
 // - Toggle a class on the hamburger to animate it
 // - Close the menu when a nav link is clicked
+function initMobileNav() {
+    if (!menuToggle || !navMenu) return;
+
+    menuToggle.addEventListener('click', function () {
+        const isOpen = navMenu.classList.toggle('active');
+
+        menuToggle.classList.toggle('active', isOpen);
+
+        menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
 
 
 // ==========================================================
@@ -118,6 +142,11 @@
 // - function showError(inputId, message) { ... }
 // - function clearErrors() { ... }
 // - function scrollToTop() { ... }
+document.addEventListener('DOMContentLoaded', function () {
+    initMobileNav();
+
+    console.log('NovaTech Solutions — Website Loaded ✅');
+});
 
 
 // ==========================================================

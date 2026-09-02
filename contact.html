@@ -3,121 +3,608 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with NovaTech Solutions. Reach out for custom software, cloud solutions, or a free consultation.">
+
+    <meta
+        name="description"
+        content="Contact NovaTech Solutions for custom software, cloud solutions, cybersecurity and digital services."
+    >
+
     <meta name="author" content="NovaTech Solutions">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/icons/favicon.png"
+    >
 
-    <!-- Stylesheet -->
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Contact Page Stylesheet -->
+    <link rel="stylesheet" href="assets/css/contact.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <title>Contact Us — NovaTech Solutions</title>
 </head>
+
 <body>
 
     <!-- ========== NAVIGATION ========== -->
+
     <header id="main-header">
+
         <nav id="main-nav" class="container flex-between">
+
             <a href="index.html" class="nav-logo">
-                <span class="logo-text">Nova<span class="text-accent">Tech</span></span>
+                <span class="logo-text">
+                    Nova<span class="text-accent">Tech</span>
+                </span>
             </a>
 
             <ul id="nav-menu" class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+
+                <li>
+                    <a href="index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html" class="nav-link">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="portfolio.html" class="nav-link">
+                        Portfolio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="nav-link active">
+                        Contact
+                    </a>
+                </li>
+
             </ul>
 
-            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+            <button
+                id="menu-toggle"
+                class="menu-toggle"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+            >
                 <span class="hamburger"></span>
             </button>
+
         </nav>
+
     </header>
 
 
     <!-- ========== PAGE HERO / BANNER ========== -->
-    <section id="page-hero" class="page-hero">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p>Have a project in mind? Let's talk about how we can help your business grow.</p>
+
+    <section id="page-hero" class="contact-hero">
+
+        <div class="container contact-hero-content">
+
+            <span class="hero-label">
+                GET IN TOUCH
+            </span>
+
+            <h1>
+                Contact Us
+            </h1>
+
+            <p>
+                Have a project in mind? Let's talk about how we can help
+                your business grow.
+            </p>
+
+            <div class="breadcrumb">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <span>/</span>
+
+                <span>
+                    Contact
+                </span>
+
+            </div>
+
         </div>
+
     </section>
 
 
     <!-- ========== CONTACT SECTION ========== -->
-    <section id="contact-section" class="section bg-white">
+
+    <section id="contact-section" class="contact-section">
+
         <div class="container">
-            <!-- TODO: Two-column layout — Form on left, Contact info on right -->
-            <!-- On mobile, stack vertically -->
 
-            <!-- ── CONTACT FORM ── -->
-            <div id="contact-form-wrapper">
-                <h2>Send Us a Message</h2>
-                <form id="contact-form" novalidate>
+            <div class="contact-grid">
 
-                    <div class="form-group">
-                        <label for="full-name">Full Name <span class="text-accent">*</span></label>
-                        <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required>
-                        <span class="form-error" id="name-error"></span>
+
+                <!-- ========== CONTACT FORM ========== -->
+
+                <div class="contact-form-wrapper">
+
+                    <span class="section-label">
+                        SEND A MESSAGE
+                    </span>
+
+                    <h2>
+                        Let's Work Together
+                    </h2>
+
+                    <p class="contact-intro">
+                        Have a project, question, or idea?
+                        Fill out the form below and our team will
+                        get back to you as soon as possible.
+                    </p>
+
+
+                    <form
+                        id="contact-form"
+                        class="contact-form"
+                        novalidate
+                    >
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="full-name">
+                                Full Name
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="full-name"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                            >
+
+                            <span
+                                class="form-error"
+                                id="name-error"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                            >
+
+                            <span
+                                class="form-error"
+                                id="email-error"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                                <span class="optional">
+                                    Optional
+                                </span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+234 (0) 800 000 0000"
+                                autocomplete="tel"
+                            >
+
+                        </div>
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="form-group">
+
+                            <label for="subject">
+                                Subject
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="What is this about?"
+                            >
+
+                            <span
+                                class="form-error"
+                                id="subject-error"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                                <span class="required">*</span>
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Tell us about your project or inquiry..."
+                            ></textarea>
+
+                            <span
+                                class="form-error"
+                                id="message-error"
+                            ></span>
+
+                        </div>
+
+
+                        <!-- SUBMIT BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary contact-submit"
+                        >
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- ========== CONTACT INFORMATION ========== -->
+
+                <aside class="contact-info-card">
+
+                    <span class="section-label">
+                        CONTACT INFORMATION
+                    </span>
+
+                    <h2>
+                        Get In Touch
+                    </h2>
+
+                    <p>
+                        We're here to help you find the right
+                        technology solution for your business.
+                    </p>
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Our Location
+                            </h3>
+
+                            <p>
+                                14 Ademola Adetokunbo Crescent,
+                                Wuse 2, Abuja, FCT, Nigeria
+                            </p>
+                        </div>
+
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">Email Address <span class="text-accent">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                        <span class="form-error" id="email-error"></span>
+
+                    <!-- PHONE -->
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Phone
+                            </h3>
+
+                            <a href="tel:+2348123456789">
+                                +234 (0) 812 345 6789
+                            </a>
+                        </div>
+
                     </div>
 
-                    <div class="form-group">
-                        <label for="phone">Phone Number <span class="text-muted">(Optional)</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="+234 (0) 800 000 0000">
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Email
+                            </h3>
+
+                            <a href="mailto:info@novatechsolutions.com.ng">
+                                info@novatechsolutions.com.ng
+                            </a>
+                        </div>
+
                     </div>
 
-                    <div class="form-group">
-                        <label for="subject">Subject <span class="text-accent">*</span></label>
-                        <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
-                        <span class="form-error" id="subject-error"></span>
+
+                    <!-- WORKING HOURS -->
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Working Hours
+                            </h3>
+
+                            <p>
+                                Monday – Friday
+                                <br>
+                                8:00 AM – 5:00 PM WAT
+                            </p>
+                        </div>
+
                     </div>
 
-                    <div class="form-group">
-                        <label for="message">Message <span class="text-accent">*</span></label>
-                        <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..." required></textarea>
-                        <span class="form-error" id="message-error"></span>
+
+                    <!-- SOCIAL MEDIA -->
+
+                    <div class="contact-social">
+
+                        <h3>
+                            Follow Us
+                        </h3>
+
+                        <div class="social-links">
+
+                            <a
+                                href="#"
+                                aria-label="LinkedIn"
+                            >
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a
+                                href="#"
+                                aria-label="X"
+                            >
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                        </div>
+
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
+                </aside>
 
-            <!-- ── CONTACT INFORMATION ── -->
-            <div id="contact-info">
-                <!-- TODO: Display company contact details from docs/design/PROJECT-BRIEF.md -->
-                <!-- Address, Phone, Email, Working Hours -->
-                <!-- Social media links -->
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- ========== MAP SECTION (Optional) ========== -->
-    <section id="map-section">
-        <!-- TODO (OPTIONAL): Embed a Google Maps iframe or a decorative map image -->
-        <!-- Address: 14 Ademola Adetokunbo Crescent, Wuse 2, Abuja, FCT, Nigeria -->
+    <!-- ========== MAP SECTION ========== -->
+
+    <section id="map-section" class="map-section">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    FIND US
+                </span>
+
+                <h2>
+                    Our Location
+                </h2>
+
+            </div>
+
+            <div class="map-wrapper">
+
+                <iframe
+                    src="https://www.google.com/maps?q=14%20Ademola%20Adetokunbo%20Crescent,%20Wuse%202,%20Abuja,%20Nigeria&output=embed"
+                    loading="lazy"
+                    title="NovaTech Solutions location in Abuja"
+                ></iframe>
+
+            </div>
+
+        </div>
+
     </section>
 
 
     <!-- ========== FOOTER ========== -->
+
     <footer id="main-footer" class="bg-primary">
+
         <div class="container">
-            <!-- TODO: Footer content (same as index.html) -->
+
+            <div class="footer-grid">
+
+
+                <!-- COMPANY -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Nova<span class="text-accent">Tech</span>
+                    </h3>
+
+                    <p>
+                        Empowering Africa's Digital Future —
+                        One Solution at a Time.
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="services.html">
+                        Services
+                    </a>
+
+                    <a href="portfolio.html">
+                        Portfolio
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- SERVICES -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Services
+                    </h4>
+
+                    <a href="services.html">
+                        Web Development
+                    </a>
+
+                    <a href="services.html">
+                        Cloud & DevOps
+                    </a>
+
+                    <a href="services.html">
+                        Mobile Apps
+                    </a>
+
+                    <a href="services.html">
+                        Cybersecurity
+                    </a>
+
+                    <a href="services.html">
+                        Tech Training
+                    </a>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Contact
+                    </h4>
+
+                    <a href="tel:+2348123456789">
+                        +234 (0) 812 345 6789
+                    </a>
+
+                    <a href="mailto:info@novatechsolutions.com.ng">
+                        info@novatechsolutions.com.ng
+                    </a>
+
+                    <p>
+                        Abuja, Nigeria
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 NovaTech Solutions. All rights reserved.
+                </p>
+
+            </div>
+
         </div>
+
     </footer>
 
 
     <!-- JavaScript -->
+
     <script src="assets/js/main.js"></script>
+
 </body>
 </html>
